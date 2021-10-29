@@ -14,6 +14,14 @@
 
         <div class="heroImage">
             <img :src="slides[counter].image" alt="">
+            <div class="heroText">
+                <h2 class="title">
+                   {{slides[counter].title}}
+                </h2>
+                <p class="text">
+                    {{slides[counter].text}}
+                </p>
+            </div>
         </div>
         
         <div id=imageSelector>
@@ -22,7 +30,7 @@
                 <img v-bind:src="slide.image" alt="">
 
             </div>
-            <button id="down" v-on:click="arrowDown"><i class="fas fa-chevron-down"></i></button>
+            <button id="down" @click="arrowDown"><i class="fas fa-chevron-down"></i></button>
         </div>
     </div>
 
