@@ -31,7 +31,9 @@ const carousel = new Vue ({
             title: "Paradise",
             text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.',
             },
-        ]
+        ],
+
+        autoPlay: true,
     },
 
     methods: {
@@ -51,16 +53,15 @@ const carousel = new Vue ({
             }
         },
 
+        slideShow(){
+            // if (autoPlay == true) {
+                setInterval(arrowDown, 3000)
 
-        timerStart() {
-            setInterval(function (){
-            arrowUp()
-                
-            }, 3000)
-        },
-
-        timerStop() {
-            clearInterval
+            // } else {
+                // clearInterval(slideShow) 
+                    
+                // }
         }
     }
+        
 });
