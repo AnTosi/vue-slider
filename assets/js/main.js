@@ -22,6 +22,9 @@ const carousel = new Vue ({
             'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
             'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
             'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-        ]
+        ],
+
+        counter: 0,
     }
 })
+
