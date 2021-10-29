@@ -28,31 +28,39 @@ const carousel = new Vue ({
             },
             {
             image: './assets/img/05.jpg',
-            title:
-                'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.',
+            title: "Paradise",
+            text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.',
             },
         ]
     },
 
     methods: {
-        arrowDown(counter) {
-            if (counter > 0) {
-                --counter;
-                return counter;
+        arrowUp() {
+            if (this.counter > 0) {
+                --this.counter;
             } else {
-                counter = 4;
-                return counter;
+                this.counter = 4;
             }
         },
 
-        arrowUp(counter) {
-            if (counter < 4) {
-                ++counter;
-                return counter;
+        arrowDown() {
+            if (this.counter < 4) {
+                ++this.counter;
             } else {
-                counter = 0;
-                return counter;
+                this.counter = 0;
             }
+        },
+
+
+        timerStart() {
+            setInterval(function (){
+            arrowUp()
+                
+            }, 3000)
+        },
+
+        timerStop() {
+            clearInterval
         }
     }
 });

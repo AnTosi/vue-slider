@@ -31,7 +31,6 @@ body {
 }
 
 .thumb {
-    filter: brightness(0.6);
     height: calc(300px / 5);
 }
 
@@ -39,6 +38,7 @@ body {
     object-fit: cover;
     width: 100%;
     height: 100%;
+    filter: brightness(0.6);
 }
 
 .heroText {
@@ -50,7 +50,7 @@ body {
     color: white;
 }
 
-.thumb.active {
+.thumb .active {
     filter: brightness(1);
     border: 2px solid rgb(196, 209, 175);
 }

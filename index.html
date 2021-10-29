@@ -26,9 +26,9 @@
         
         <div id=imageSelector>
             <button id="up" @click="arrowUp"><i class="fas fa-chevron-up"></i></button>
-            <div v-for="slide in slides" class="thumb">
-                <img v-bind:src="slide.image" alt="">
-
+            <div v-for="(slide, index) in slides"  class="thumb">
+                <img v-bind:src="slide.image" v-if="counter == index" class="active" alt="">
+                <img v-bind:src="slide.image" v-else alt="">
             </div>
             <button id="down" @click="arrowDown"><i class="fas fa-chevron-down"></i></button>
         </div>
