@@ -55,7 +55,9 @@ const carousel = new Vue ({
 
         slideShow(){
             // if (autoPlay == true) {
-                setInterval(arrowDown, 3000)
+                setInterval(function () {
+                    ++counter;
+                }, 3000)
 
             // } else {
                 // clearInterval(slideShow) 
