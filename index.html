@@ -17,7 +17,7 @@
         </div>
         
         <div id=imageSelector>
-            <button id="up" v-on:click="arrowUp"><i class="fas fa-chevron-up"></i></button>
+            <button id="up" @click="arrowUp"><i class="fas fa-chevron-up"></i></button>
             <div v-for="slide in slides" class="thumb">
                 <img v-bind:src="slide.image" alt="">
 

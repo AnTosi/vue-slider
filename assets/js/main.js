@@ -3,7 +3,7 @@ let counter = 0;
 const carousel = new Vue ({
     el: "#root",
     data: {
-        counter = 0,
+        counter: 0,
 
         slides: [
             {
