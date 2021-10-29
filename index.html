@@ -11,18 +11,18 @@
 <body>
     <div id="root">
         <p>{{counter}}</p>
-        <div class="heroImage">
-            <img v-bind:src="images" alt="">
-            <!-- <p>{{title.1}}</p> -->
-        </div>
 
+        <div class="heroImage">
+            <img :src="slides[counter].image" alt="">
+        </div>
+        
         <div id=imageSelector>
-            <button id="up" v-on:click="counter += 1"><i class="fas fa-chevron-up"></i></button>
-            <div v-for="image in images" class="thumb">
-                <img v-bind:src="image" alt="">
+            <button id="up" v-on:click="arrowUp"><i class="fas fa-chevron-up"></i></button>
+            <div v-for="slide in slides" class="thumb">
+                <img v-bind:src="slide.image" alt="">
 
             </div>
-            <button id="down" v-on:click="counter -=1"><i class="fas fa-chevron-down"></i></button>
+            <button id="down" v-on:click="arrowDown"><i class="fas fa-chevron-down"></i></button>
         </div>
     </div>
 

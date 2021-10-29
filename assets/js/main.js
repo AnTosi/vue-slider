@@ -1,37 +1,58 @@
+let counter = 0;
+
 const carousel = new Vue ({
     el: "#root",
     data: {
-        images: [
-            './assets/img/01.jpg',
-            './assets/img/02.jpg',
-            './assets/img/03.jpg',
-            './assets/img/04.jpg',
-            './assets/img/05.jpg'
-        ],
-        title: [
-            'Svezia',
-            'Svizzera',
-            'Gran Bretagna',
-            'Germania',
-            'Paradise'
-        ],
+        counter = 0,
 
-        text: [
-            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
-            'Lorem ipsum',
-            'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
-            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-            'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-        ],
+        slides: [
+            {
+            image: './assets/img/01.jpg',
+            title: 'Svezia',
+            text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
+            },
+            {
+            image: './assets/img/02.jpg',
+            title: 'Svizzera',
+            text: 'Lorem ipsum.',
+            },
+            {
+            image: './assets/img/03.jpg',
+            title: 'Gran Bretagna',
+            text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
+            },
+            {
+            image: './assets/img/04.jpg',
+            title: 'Germania',
+            text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam.',
+            },
+            {
+            image: './assets/img/05.jpg',
+            title:
+                'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.',
+            },
+        ]
+    },
 
-        counter: 0,
+    methods: {
+        arrowDown(counter) {
+            if (counter > 0) {
+                --counter;
+                return counter;
+            } else {
+                counter = 4;
+                return counter;
+            }
+        },
+
+        arrowUp(counter) {
+            if (counter < 4) {
+                ++counter;
+                return counter;
+            } else {
+                counter = 0;
+                return counter;
+            }
+        }
     }
-
 });
-
-// for (let i = 0; i < 4; i++) {
-//     if (counter = i) {
-//         this.classList
-//     }
-    
-// }
