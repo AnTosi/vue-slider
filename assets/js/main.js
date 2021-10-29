@@ -26,5 +26,12 @@ const carousel = new Vue ({
 
         counter: 0,
     }
-})
 
+});
+
+// for (let i = 0; i < 4; i++) {
+//     if (counter = i) {
+//         this.classList
+//     }
+    
+// }

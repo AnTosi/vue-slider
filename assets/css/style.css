@@ -21,7 +21,7 @@ body {
     width: 700px;
     height: 300px;
     position: relative;
-    display: none;
+    /* display: none; */
 }
 
 #imageSelector {
