@@ -69,7 +69,8 @@ const carousel = new Vue ({
                 // clearInterval(slideShow) 
                     
                 // }
-        }
+        },
     }
-        
+     
+    
 });
