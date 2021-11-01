@@ -70,6 +70,11 @@ const carousel = new Vue ({
                     
                 // }
         },
+
+
+        showThis(){
+            this.counter = this.index
+        }
     }
      
     
