@@ -32,8 +32,8 @@ const carousel = new Vue ({
             text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.',
             },
         ],
-
-        autoPlay: true,
+        autoPlay: false,
+        
     },
 
     methods: {
@@ -53,12 +53,16 @@ const carousel = new Vue ({
             }
         },
 
-        slideShow(){
-            // if (autoPlay == true) {
-                setInterval(function () {
 
-                    ++counter;
-                }, 3000)
+        //funzionaaaaaaa
+        
+        slideShow(){
+            if (this.autoPlay == false)  {
+                this.autoPlay = setInterval(this.arrowDown, 3000)
+            } else {
+                clearInterval(this.autoPlay);
+                this.autoPlay = false; 
+            }
 
             // } else {
                 // clearInterval(slideShow) 
