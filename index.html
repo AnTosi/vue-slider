@@ -32,7 +32,8 @@
         </div>
 
         <div class="play_container">
-            <button class="slideShow" @click="slideShow"><i class="far fa-play-circle"></i></button>
+            <button class="slideShow" @click="slideShow" v-bind:class="{hide: autoPlay}"><i class="far fa-play-circle"></i></button>
+            <button class="slideShow" @click="slideShow" v-bind:class="{hide: !autoPlay}"><i class="far fa-pause-circle"></i></button>
         </div>
     </div>
 

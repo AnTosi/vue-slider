@@ -55,10 +55,11 @@ const carousel = new Vue ({
 
 
         //funzionaaaaaaa
-        
+        // provo a cambiare icon 
         slideShow(){
             if (this.autoPlay == false)  {
-                this.autoPlay = setInterval(this.arrowDown, 3000)
+                this.autoPlay = setInterval(this.arrowDown, 3000);
+                
             } else {
                 clearInterval(this.autoPlay);
                 this.autoPlay = false; 
