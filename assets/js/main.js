@@ -71,7 +71,8 @@ const carousel = new Vue ({
                 // }
         },
 
-
+        //qua volevo provare a mostrare con il click l'immagine della thumb
+        
         // showThis(){
         //     this.counter = this.index
         // }
