@@ -62,7 +62,6 @@ const carousel = new Vue ({
         slideShow(){
             if (this.autoPlay == false)  {
                 //non riesco a clearare l'interval che ho settato in automatico
-                clearInterval(autoSlide);
                 this.autoPlay = setInterval(this.arrowDown, 3000);
                 
             } else {
@@ -84,7 +83,7 @@ const carousel = new Vue ({
     },
 
     mounted() {
-        let autoSlide = setInterval(this.arrowDown, 3000)
+        this.autoPlay = setInterval(this.arrowDown, 3000)
     } 
      
     
