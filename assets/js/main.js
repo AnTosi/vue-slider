@@ -1,4 +1,5 @@
 let counter = 0;
+Vue.config.devtools = true;
 
 const carousel = new Vue ({
     el: "#root",
@@ -55,9 +56,13 @@ const carousel = new Vue ({
 
 
         //funzionaaaaaaa
-        // provo a cambiare icon 
+        // provo a cambiare icon
+
+        //ora giustamente con il mounted mi si è incasinato questo
         slideShow(){
             if (this.autoPlay == false)  {
+                //non riesco a clearare l'interval che ho settato in automatico
+                clearInterval(autoSlide);
                 this.autoPlay = setInterval(this.arrowDown, 3000);
                 
             } else {
@@ -72,14 +77,14 @@ const carousel = new Vue ({
         },
 
         //qua volevo provare a mostrare con il click l'immagine della thumb
-        
+
         // showThis(){
         //     this.counter = this.index
         // }
     },
 
     mounted() {
-        setInterval(this.arrowDown, 3000)
+        let autoSlide = setInterval(this.arrowDown, 3000)
     } 
      
     
