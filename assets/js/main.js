@@ -72,10 +72,14 @@ const carousel = new Vue ({
         },
 
 
-        showThis(){
-            this.counter = this.index
-        }
-    }
+        // showThis(){
+        //     this.counter = this.index
+        // }
+    },
+
+    mounted() {
+        setInterval(this.arrowDown, 3000)
+    } 
      
     
 });
